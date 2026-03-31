@@ -3,7 +3,7 @@ $primary-color: #012a4a;
 $secondary-color: #ffd500;
 $background-color: #e8f1f2;
 $whiteColor: #fcfcfc;
-$padding: 3em 2em;;
+$padding: 3em 2em;
 $border-radius: 15px;
 $gap: 2em;
 
@@ -24,22 +24,40 @@ p {
   color: $primary-color;
 }
 
-h1,h2{
-    font-size: 3em;
+h1,
+h2 {
+  font-size: 3em;
 }
 
-h3{
-    font-size: 1.5em;
+h3 {
+  font-size: 1.5em;
 }
 
-p{
-    font-weight: 400;
-    font-size: 18px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+p {
+  font-weight: 400;
+  font-size: 18px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 i {
   color: $secondary-color;
+  font-size: 2rem;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
 }
 
 // ----- HERO SECTION -----
@@ -55,17 +73,21 @@ i {
   display: inline-block;
 
   .baseImage {
-    display: block;
     width: 100%;
-    height: auto;
   }
 
   .overlayImage {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 100px;
-    height: auto;
+
+    width: 70%;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #012a4ac0;
     z-index: 1;
   }
 }
@@ -186,6 +208,19 @@ i {
   }
 }
 
+// ----- FIND PRACTITONER SECTION -----
+.practitionerContainer{
+    background-color: $primary-color;
+    padding: $padding;
+
+    h2{
+        color: $whiteColor;
+    }
+}
+
+
+
+
 // ----- BECOME PRACTICIONER SECTION -----
 .becomeContainer {
   background-color: $background-color;
@@ -226,11 +261,11 @@ i {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.137);
 }
 
-.gridCardDark{
-    background: $primary-color;
-    color: $whiteColor;
+.gridCardDark {
+  background: $primary-color;
+  color: $whiteColor;
 
-      h3,
+  h3,
   p {
     color: $whiteColor;
   }
