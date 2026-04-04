@@ -12,6 +12,25 @@ $gap: 2em;
   box-sizing: border-box;
 }
 
+a {
+  color: $primary-color;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -57,6 +76,12 @@ i {
   justify-content: center;
 }
 
+.iconPhone{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 12px;
+}
+
 // ----- HERO  SECTION -----
 .heroSection {
   position: relative;
@@ -69,8 +94,8 @@ i {
   padding: 6rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; // 👈 lodret center
-  align-items: center; // 👈 vandret center
+  justify-content: center;
+  align-items: center;
   text-align: center;
 
   &::before {
@@ -274,6 +299,64 @@ i {
   }
 }
 
+// ----- FOOTER -----
+footer {
+  position: relative;
+  background-color: $primary-color;
+  padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-image: url("../img/Danske-Senetensbehandlere-img05-1024x684.webp");
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color:#012a4ada;
+  }
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+
+  h3,
+  p,
+  a {
+    color: $whiteColor;
+  }
+}
+
+.logoWhite {
+  width: 20%;
+  margin-bottom: 2em;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: $whiteColor;
+  margin: 2rem 0;
+  width: 80vw;
+}
+
+.contactInfo{
+  display: flex;
+  gap: $gap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2em;
+  margin: 0 auto;
+}
+
 // ----- TABLET VERSION -----
 @media (max-width: 1024px) {
   h1,
@@ -417,5 +500,11 @@ i {
 
   .gridCard {
     padding: 2rem 1.5rem;
+  }
+
+  .contactInfo {
+    padding-bottom: 2em;
+    gap: 1.5rem;
+    display: block;
   }
 }
