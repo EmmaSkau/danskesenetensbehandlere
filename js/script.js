@@ -1,3 +1,4 @@
+// ----- HAMBURGER MENU -----
 const navToggle = document.querySelector(".navToggle");
 const mainNav = document.querySelector(".mainNav");
 const siteHeader = document.querySelector(".siteHeader");

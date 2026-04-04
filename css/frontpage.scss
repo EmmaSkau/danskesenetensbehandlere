@@ -1,0 +1,449 @@
+// ----- VARIABLES -----
+$primary-color: #012a4a;
+$secondary-color: #ffd500;
+$background-color: #e8f1f2;
+$whiteColor: #fcfcfc;
+$padding: 3em 2em;
+$border-radius: 15px;
+$gap: 2em;
+
+// ----- HERO  SECTION -----
+.heroSection {
+  position: relative;
+  height: 80vh;
+  padding-top: 10rem;
+
+  background-image: url("../img/frontpageImg.webp");
+  background-size: cover;
+  background-position: center;
+
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #012a4a83;
+  }
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1,
+  p {
+    color: $whiteColor;
+  }
+}
+
+.heroBtn {
+  padding: 1em 2em;
+  border: none;
+  border-radius: $border-radius;
+  background-color: $secondary-color;
+  margin: 2em 0.5em;
+}
+
+.heroBtn:hover {
+  background-color: $primary-color;
+  color: $whiteColor;
+}
+
+// ----- WHAT IS IT SECTION -----
+.container {
+  background-color: $background-color;
+  padding: 5em 0;
+}
+
+.WhatIsIt {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 200px;
+  gap: $gap;
+}
+
+.imageGrid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: $border-radius;
+}
+
+.whatIsItContent {
+  max-width: 500px;
+}
+
+.checkBoxColumn {
+  background-color: $whiteColor;
+  padding: $padding;
+  border-radius: $border-radius;
+  max-width: 100%;
+}
+
+.checkBox {
+  display: flex;
+  align-items: flex-start;
+  gap: $gap;
+  margin-bottom: 1.2rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.checkBox:last-child {
+  margin-bottom: 0;
+}
+
+// ----- EXPERIENCE SECTION -----
+.textContainer {
+  margin-top: 5em;
+  text-align: center;
+}
+
+.treatmentAreas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.treatmentCard {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: $border-radius;
+  }
+}
+
+.treatmentCardContent {
+  background: $whiteColor;
+  padding: $padding;
+  border-radius: 16px;
+  position: relative;
+  margin-top: -60px; // overlap effect
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.137);
+}
+
+.treatmentCard--dark {
+  .treatmentCardContent {
+    background: $primary-color;
+    color: $whiteColor;
+  }
+
+  h3,
+  p {
+    color: $whiteColor;
+  }
+}
+
+// ----- FIND PRACTITONER SECTION -----
+.practitionerContainer {
+  background-color: $primary-color;
+  padding: $padding;
+
+  h2 {
+    color: $whiteColor;
+  }
+}
+
+// ----- BECOME PRACTICIONER SECTION -----
+.becomeContainer {
+  background-color: $background-color;
+  padding: 0 2em 2em 2em;
+}
+
+.becomeOverview {
+  display: flex;
+  gap: $gap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2em;
+  margin: 0 auto;
+}
+
+.trainingBtn {
+  background-color: $secondary-color;
+  padding: 1em 2em;
+  border: none;
+  border-radius: $border-radius;
+}
+
+.trainingBtn:hover {
+  background-color: $primary-color;
+  color: $whiteColor;
+}
+
+.gridBoxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gridCard {
+  padding: $padding;
+  background-color: $whiteColor;
+  border-radius: $border-radius;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.137);
+}
+
+.gridCardDark {
+  background: $primary-color;
+  color: $whiteColor;
+
+  h3,
+  p {
+    color: $whiteColor;
+  }
+}
+
+// ----- TABLET VERSION -----
+@media (max-width: 1024px) {
+  h1,
+  h2 {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .siteHeader {
+    padding: 1rem 1.5rem;
+    width: calc(100vw - 2rem);
+    top: 0.75rem;
+  }
+
+  .mainNav {
+    gap: 1.25rem;
+
+    a {
+      font-size: 14px;
+    }
+  }
+
+  .headerLogo .logo {
+    width: 130px;
+  }
+
+  .heroSection {
+    height: 70vh;
+    padding: 4rem 2rem;
+  }
+
+  .heroSection p {
+    max-width: 700px;
+  }
+
+  .whatIsItContent {
+    max-width: 100%;
+  }
+
+  .imageGrid {
+    grid-auto-rows: 180px;
+  }
+
+  .treatmentAreas {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+  }
+}
+
+// ----- MOBILE VERSION -----
+@media (max-width: 768px) {
+  h1,
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .siteHeader {
+    top: 0.75rem;
+    width: calc(100vw - 1.5rem);
+    padding: 1rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .navToggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  .mainNav {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 0;
+    width: 100%;
+    background-color: $whiteColor;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    padding: 1rem 1.25rem;
+
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    a {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+
+  .mainNav.active {
+    display: flex;
+  }
+
+  .siteHeader.menuOpen .navToggle span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .siteHeader.menuOpen .navToggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .siteHeader.menuOpen .navToggle span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .headerLogo .logo {
+    width: 120px;
+  }
+
+  .heroSection {
+    height: auto;
+    min-height: 70vh;
+    padding: 4rem 1.5rem;
+  }
+
+  .heroSection p {
+    max-width: 100%;
+  }
+
+  .btnOverview {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .heroBtn {
+    width: 100%;
+    max-width: 280px;
+    margin: 0;
+  }
+
+  .container {
+    padding: 3rem 0;
+  }
+
+  .WhatIsIt {
+    padding: 0 1.5rem;
+    gap: 2rem;
+  }
+
+  .imageGrid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+    gap: 1rem;
+  }
+
+  .checkBoxColumn {
+    padding: 2rem 1.5rem;
+  }
+
+  .checkBox {
+    gap: 1rem;
+  }
+
+  .textContainer {
+    margin-top: 3rem;
+    padding: 0 1.5rem;
+  }
+
+  .treatmentAreas {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .treatmentCardContent {
+    padding: 2rem 1.5rem;
+    margin-top: -40px;
+  }
+
+  .practitionerContainer {
+    padding: 2rem 1.5rem;
+  }
+
+  .becomeContainer {
+    padding: 3rem 1.5rem;
+  }
+
+  .becomeOverview {
+    padding-bottom: 2em;
+    gap: 1.5rem;
+    display: block;
+  }
+
+  .trainingBtn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .gridBoxes {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .gridCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .contactInfo {
+    padding-bottom: 2em;
+    gap: 1.5rem;
+    display: block;
+  }
+}
