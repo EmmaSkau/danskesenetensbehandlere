@@ -76,10 +76,43 @@ i {
   justify-content: center;
 }
 
-.iconPhone{
+.iconPhone {
   display: flex;
   justify-content: center;
   padding-bottom: 12px;
+}
+
+// ----- HEADER -----
+header {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: $whiteColor;
+}
+
+.headerLogo {
+  img{
+    width: 30%;
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
+
+.mainNav {
+  display: flex;
+  gap: 1.5rem;
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+  }
 }
 
 // ----- HERO  SECTION -----
@@ -318,7 +351,7 @@ footer {
     content: "";
     position: absolute;
     inset: 0;
-    background-color:#012a4ada;
+    background-color: #012a4ada;
   }
 
   * {
@@ -346,7 +379,7 @@ hr {
   width: 80vw;
 }
 
-.contactInfo{
+.contactInfo {
   display: flex;
   gap: $gap;
   align-items: center;
