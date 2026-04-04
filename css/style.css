@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -32,40 +36,44 @@ i {
   justify-content: center;
 }
 
-.hero {
-  display: flex;
-  gap: 2em;
-  align-items: center;
-  background-color: #012a4a;
-  background-image: radial-gradient(#000 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-.imageWrapper {
+.heroSection {
   position: relative;
-  display: inline-block;
+  height: 80vh;
+  background-image: url("../img/frontpageImg.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.imageWrapper .baseImage {
-  width: 100%;
-}
-.imageWrapper .overlayImage {
-  position: absolute;
-  width: 70%;
-  z-index: 2;
-}
-.imageWrapper::after {
+.heroSection::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(1, 42, 74, 0.7529411765);
+  background-color: rgba(1, 42, 74, 0.5137254902);
+}
+.heroSection * {
+  position: relative;
   z-index: 1;
 }
-
-.heroText {
-  margin: 0 auto;
+.heroSection h1,
+.heroSection p {
+  color: #fcfcfc;
 }
-.heroText h1,
-.heroText p {
+
+.heroBtn {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 15px;
+  background-color: #ffd500;
+  margin: 2em 0.5em;
+}
+
+.heroBtn:hover {
+  background-color: #012a4a;
   color: #fcfcfc;
 }
 
@@ -98,10 +106,6 @@ i {
      object-fit: cover;
   display: block;
   border-radius: 15px;
-}
-
-.tall {
-  grid-row: span 2;
 }
 
 .whatIsItContent {
@@ -140,7 +144,8 @@ i {
   gap: 2em;
   margin: 0 auto;
   padding: 4rem 2rem;
-  max-width: 50%;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .treatmentCard {
@@ -182,14 +187,16 @@ i {
 
 .becomeContainer {
   background-color: #e8f1f2;
-  padding-bottom: 2em;
+  padding: 0 2em 2em 2em;
 }
 
 .becomeOverview {
   display: flex;
   gap: 2em;
   align-items: center;
-  max-width: 50%;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
   padding: 2em;
   margin: 0 auto;
 }
@@ -210,7 +217,8 @@ i {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2em;
-  max-width: 50%;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -228,4 +236,120 @@ i {
 .gridCardDark h3,
 .gridCardDark p {
   color: #fcfcfc;
+}
+
+@media (max-width: 1024px) {
+  h1,
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1.3em;
+  }
+  p {
+    font-size: 16px;
+  }
+  .heroSection {
+    height: 70vh;
+    padding: 4rem 2rem;
+  }
+  .heroSection p {
+    max-width: 700px;
+  }
+  .whatIsItContent {
+    max-width: 100%;
+  }
+  .imageGrid {
+    grid-auto-rows: 180px;
+  }
+  .treatmentAreas {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  h1,
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 15px;
+  }
+  .heroSection {
+    height: auto;
+    min-height: 70vh;
+    padding: 4rem 1.5rem;
+  }
+  .heroSection p {
+    max-width: 100%;
+  }
+  .btnOverview {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+  }
+  .heroBtn {
+    width: 100%;
+    max-width: 280px;
+    margin: 0;
+  }
+  .container {
+    padding: 3rem 0;
+  }
+  .WhatIsIt {
+    padding: 0 1.5rem;
+    gap: 2rem;
+  }
+  .imageGrid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+    gap: 1rem;
+  }
+  .checkBoxColumn {
+    padding: 2rem 1.5rem;
+  }
+  .checkBox {
+    gap: 1rem;
+  }
+  .textContainer {
+    margin-top: 3rem;
+    padding: 0 1.5rem;
+  }
+  .treatmentAreas {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+  }
+  .treatmentCardContent {
+    padding: 2rem 1.5rem;
+    margin-top: -40px;
+  }
+  .practitionerContainer {
+    padding: 2rem 1.5rem;
+  }
+  .becomeContainer {
+    padding: 3rem 1.5rem;
+  }
+  .becomeOverview {
+    padding-bottom: 2em;
+    gap: 1.5rem;
+    display: block;
+  }
+  .trainingBtn {
+    width: 100%;
+    max-width: 280px;
+  }
+  .gridBoxes {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .gridCard {
+    padding: 2rem 1.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
