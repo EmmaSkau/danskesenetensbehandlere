@@ -7,3 +7,108 @@ $padding: 3em 2em;
 $paddingSection: 5em;
 $border-radius: 15px;
 $gap: 2em;
+
+// ----- HERO  SECTION -----
+.heroSection {
+  position: relative;
+  height: 40vh;
+  padding-top: 10rem;
+
+  background-image: url("../img/frontpageImg.webp");
+  background-size: cover;
+  background-position: center;
+
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #012a4a83;
+  }
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1,
+  p {
+    color: $whiteColor;
+  }
+}
+
+// ----- PHISICAL SECTION -----
+.fysical {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $paddingSection;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  img {
+    border-radius: $border-radius;
+    height: 600px;
+    width: auto;
+  }
+}
+
+// ----- Proprioceptiv SECTION -----
+.Proprioceptiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $paddingSection;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  img {
+    border-radius: $border-radius;
+    height: 500px;
+    width: auto;
+  }
+}
+
+// ----- INFO BOXES -----
+.infoBoxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: $paddingSection;
+}
+
+.readMore {
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  padding: $padding;
+
+  h3,
+  p {
+    color: $whiteColor;
+  }
+
+  button {
+    background-color: $secondary-color;
+    border-radius: $border-radius;
+    padding: 1em 2em;
+    margin-top: 1rem;
+  }
+}

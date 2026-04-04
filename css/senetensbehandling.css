@@ -1,1 +1,89 @@
-/*# sourceMappingURL=senetensbehandling.css.map */
+.heroSection {
+  position: relative;
+  height: 40vh;
+  padding-top: 10rem;
+  background-image: url("../img/frontpageImg.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.heroSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(1, 42, 74, 0.5137254902);
+}
+.heroSection * {
+  position: relative;
+  z-index: 1;
+}
+.heroSection h1,
+.heroSection p {
+  color: #fcfcfc;
+}
+
+.fysical {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5em;
+}
+.fysical h2 {
+  margin-bottom: 1rem;
+}
+.fysical img {
+  border-radius: 15px;
+  height: 600px;
+  width: auto;
+}
+
+.Proprioceptiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5em;
+}
+.Proprioceptiv h2 {
+  margin-bottom: 1rem;
+}
+.Proprioceptiv img {
+  border-radius: 15px;
+  height: 500px;
+  width: auto;
+}
+
+.infoBoxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 5em;
+}
+
+.readMore {
+  background-color: #012a4a;
+  border-radius: 15px;
+  padding: 3em 2em;
+}
+.readMore h3,
+.readMore p {
+  color: #fcfcfc;
+}
+.readMore button {
+  background-color: #ffd500;
+  border-radius: 15px;
+  padding: 1em 2em;
+  margin-top: 1rem;
+}/*# sourceMappingURL=senetensbehandling.css.map */
