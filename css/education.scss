@@ -1,0 +1,267 @@
+// ----- VARIABLES -----
+$primary-color: #012a4a;
+$secondary-color: #ffd500;
+$background-color: #e8f1f2;
+$whiteColor: #fcfcfc;
+$padding: 3em 2em;
+$paddingSection: 5em;
+$border-radius: 15px;
+$gap: 2em;
+
+// ----- HERO  SECTION -----
+.heroSection {
+  position: relative;
+  height: 50vh;
+  padding-top: 10rem;
+
+  background-image: url("../img/Danske-Senetensbehandlere-img08-684x1024.webp");
+  background-size: cover;
+  background-position: center;
+
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #012a4a83;
+  }
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1,
+  p {
+    color: $whiteColor;
+  }
+}
+
+.heroBtn {
+  padding: 1em 2em;
+  border: none;
+  border-radius: $border-radius;
+  background-color: $secondary-color;
+  margin: 2em 0.5em;
+}
+
+.heroBtn:hover {
+  background-color: $primary-color;
+  color: $whiteColor;
+}
+
+// ----- WHAT YOU LEARN -----
+.learnOverview {
+  text-align: center;
+  padding: $paddingSection;
+}
+
+.learnGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+
+  i {
+    margin-bottom: 1rem;
+  }
+}
+
+.learn {
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  padding: 2em;
+
+  h3,
+  p {
+    color: $whiteColor;
+  }
+}
+
+.learn:hover {
+  background-color: #012a4aef;
+}
+
+// ----- ABOUT THE EDUCATION -----
+.educationOverview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $gap;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.educationModulOverview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $gap;
+}
+
+.educationModul {
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  padding: 2em;
+
+  h3,
+  p {
+    color: $whiteColor;
+    text-align: center;
+  }
+}
+
+// ----- BOOK CONVERSATION -----
+.bookOVerview {
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  padding: $padding;
+  margin: 5em auto 5em auto;
+  max-width: 1200px;
+  text-align: center;
+
+  h3{
+    color: $whiteColor;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $whiteColor;
+  }
+
+  i {
+    margin-bottom: 1em;
+  }
+}
+
+
+// ----- TABLET -----
+@media (max-width: 1024px) {
+  .heroSection {
+    height: 45vh;
+    padding: 5rem 2rem;
+  }
+
+  .heroSection p {
+    max-width: 700px;
+  }
+
+  .learnOverview {
+    padding: 4rem 2rem;
+  }
+
+  .learnGrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 0 0 0;
+  }
+
+  .educationOverview {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .educationModulOverview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bookOVerview {
+    margin: 4rem 2rem;
+    padding: 2.5rem 2rem;
+  }
+}
+
+
+// ----- MOBILE -----
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 50vh;
+    height: auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .heroSection h1 {
+    font-size: 2.2rem;
+  }
+
+  .heroSection p {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .heroBtn {
+    width: 100%;
+    max-width: 280px;
+    margin: 1.5rem 0 0 0;
+  }
+
+  .learnOverview {
+    padding: 3rem 1.5rem;
+  }
+
+  .learnGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0 0 0;
+  }
+
+  .learn {
+    padding: 1.5rem;
+  }
+
+  .educationOverview {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 3rem 1.5rem;
+  }
+
+  .educationModulOverview {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .educationModul {
+    padding: 1.5rem;
+  }
+
+  .bookOVerview {
+    margin: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+}
+
+
+// ----- SMALL MOBILE -----
+@media (max-width: 480px) {
+  .heroSection h1 {
+    font-size: 1.9rem;
+  }
+
+  .learnOverview,
+  .educationOverview {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .bookOVerview {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .heroBtn {
+    max-width: 100%;
+  }
+}

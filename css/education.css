@@ -1,1 +1,214 @@
-/*# sourceMappingURL=education.css.map */
+.heroSection {
+  position: relative;
+  height: 50vh;
+  padding-top: 10rem;
+  background-image: url("../img/Danske-Senetensbehandlere-img08-684x1024.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.heroSection h1 {
+  margin-bottom: 1rem;
+}
+.heroSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(1, 42, 74, 0.5137254902);
+}
+.heroSection * {
+  position: relative;
+  z-index: 1;
+}
+.heroSection h1,
+.heroSection p {
+  color: #fcfcfc;
+}
+
+.heroBtn {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 15px;
+  background-color: #ffd500;
+  margin: 2em 0.5em;
+}
+
+.heroBtn:hover {
+  background-color: #012a4a;
+  color: #fcfcfc;
+}
+
+.learnOverview {
+  text-align: center;
+  padding: 5em;
+}
+
+.learnGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+.learnGrid i {
+  margin-bottom: 1rem;
+}
+
+.learn {
+  background-color: #012a4a;
+  border-radius: 15px;
+  padding: 2em;
+}
+.learn h3,
+.learn p {
+  color: #fcfcfc;
+}
+
+.learn:hover {
+  background-color: rgba(1, 42, 74, 0.937254902);
+}
+
+.educationOverview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.educationModulOverview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.educationModul {
+  background-color: #012a4a;
+  border-radius: 15px;
+  padding: 2em;
+}
+.educationModul h3,
+.educationModul p {
+  color: #fcfcfc;
+  text-align: center;
+}
+
+.bookOVerview {
+  background-color: #012a4a;
+  border-radius: 15px;
+  padding: 3em 2em;
+  margin: 5em auto 5em auto;
+  max-width: 1200px;
+  text-align: center;
+}
+.bookOVerview h3 {
+  color: #fcfcfc;
+  margin-bottom: 1rem;
+}
+.bookOVerview p {
+  color: #fcfcfc;
+}
+.bookOVerview i {
+  margin-bottom: 1em;
+}
+
+@media (max-width: 1024px) {
+  .heroSection {
+    height: 45vh;
+    padding: 5rem 2rem;
+  }
+  .heroSection p {
+    max-width: 700px;
+  }
+  .learnOverview {
+    padding: 4rem 2rem;
+  }
+  .learnGrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 0 0 0;
+  }
+  .educationOverview {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .educationModulOverview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bookOVerview {
+    margin: 4rem 2rem;
+    padding: 2.5rem 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 50vh;
+    height: auto;
+    padding: 4rem 1.5rem;
+  }
+  .heroSection h1 {
+    font-size: 2.2rem;
+  }
+  .heroSection p {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+  .heroBtn {
+    width: 100%;
+    max-width: 280px;
+    margin: 1.5rem 0 0 0;
+  }
+  .learnOverview {
+    padding: 3rem 1.5rem;
+  }
+  .learnGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0 0 0;
+  }
+  .learn {
+    padding: 1.5rem;
+  }
+  .educationOverview {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 3rem 1.5rem;
+  }
+  .educationModulOverview {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .educationModul {
+    padding: 1.5rem;
+  }
+  .bookOVerview {
+    margin: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .heroSection h1 {
+    font-size: 1.9rem;
+  }
+  .learnOverview,
+  .educationOverview {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .bookOVerview {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1.5rem 1rem;
+  }
+  .heroBtn {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=education.css.map */
