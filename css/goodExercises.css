@@ -1,1 +1,162 @@
-/*# sourceMappingURL=goodExercises.css.map */
+.heroSection {
+  position: relative;
+  height: 50vh;
+  padding-top: 10rem;
+  background-image: url("../img/Danske-Senetensbehandlere-img08-684x1024.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.heroSection h1 {
+  margin-bottom: 1rem;
+}
+.heroSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(1, 42, 74, 0.5137254902);
+}
+.heroSection * {
+  position: relative;
+  z-index: 1;
+}
+.heroSection h1,
+.heroSection p {
+  color: #fcfcfc;
+}
+
+.heroBtn {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 15px;
+  background-color: #ffd500;
+  margin: 2em 0.5em;
+}
+
+.heroBtn:hover {
+  background-color: #012a4a;
+  color: #fcfcfc;
+}
+
+.text {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 5em;
+  padding-bottom: 3em;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (max-width: 1024px) {
+  .heroSection {
+    height: 40vh;
+    padding: 5rem 2rem;
+  }
+  .heroSection h1 {
+    font-size: 2.5rem;
+  }
+  .heroSection p {
+    max-width: 700px;
+  }
+  .text {
+    max-width: 800px;
+    padding: 4rem 2rem 2rem 2rem;
+  }
+  .videoWrapper {
+    max-width: 100%;
+    margin: 1.5rem auto;
+  }
+  .videoGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  .heroSection {
+    height: 40vh;
+    padding: 5rem 2rem;
+  }
+  .heroSection h1 {
+    font-size: 2.5rem;
+  }
+  .heroSection p {
+    max-width: 700px;
+  }
+  .text {
+    max-width: 800px;
+    padding: 4rem 2rem 2rem 2rem;
+  }
+  .videoWrapper {
+    max-width: 100%;
+    margin: 1.5rem auto;
+  }
+  .videoGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 40vh;
+    height: auto;
+    padding: 4rem 1.5rem;
+  }
+  .heroSection h1 {
+    font-size: 2.2rem;
+  }
+  .heroSection p {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+  .text {
+    max-width: 100%;
+    padding: 3rem 1.5rem 2rem 1.5rem;
+  }
+  .text h2 {
+    font-size: 2rem;
+  }
+  .videoWrapper {
+    max-width: 100%;
+    margin: 1rem auto;
+    border-radius: 12px;
+  }
+  .videoGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem 1.5rem 3rem 1.5rem;
+  }
+}/*# sourceMappingURL=goodExercises.css.map */
