@@ -1,1 +1,190 @@
-/*# sourceMappingURL=contact.css.map */
+.heroSection {
+  position: relative;
+  height: 40vh;
+  padding-top: 10rem;
+  background-image: url("../img/frontpageImg.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.heroSection h1 {
+  margin-bottom: 1rem;
+}
+.heroSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(1, 42, 74, 0.5137254902);
+}
+.heroSection * {
+  position: relative;
+  z-index: 1;
+}
+.heroSection h1,
+.heroSection p {
+  color: #fcfcfc;
+}
+
+.contactPerson {
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.peopleOverview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 2em;
+  padding-top: 2em;
+}
+
+.people {
+  background-color: #012a4a;
+  border-radius: 15px;
+  padding: 3em 2em;
+}
+.people h3,
+.people p,
+.people a {
+  color: #fcfcfc;
+  display: block;
+  margin: 1rem 0;
+}
+.people img {
+  width: 200px;
+}
+
+.behindScene {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 0 auto 5em auto;
+  background-color: rgba(1, 43, 75, 0.662745098);
+  padding: 3em 2em;
+  border-radius: 15px;
+}
+.behindScene h2 {
+  color: #fcfcfc;
+  margin-bottom: 1rem;
+}
+.behindScene h3,
+.behindScene p {
+  color: #fcfcfc;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4em;
+  gap: 2em;
+}
+
+.Info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1em 2em;
+  border: solid #fcfcfc;
+  border-radius: 15px;
+}
+
+.contactText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.iconWrapper {
+  padding-right: 2em;
+}
+
+@media (max-width: 1024px) {
+  .heroSection {
+    height: 35vh;
+    padding: 5rem 2rem;
+  }
+  .heroSection p {
+    max-width: 700px;
+  }
+  .peopleOverview {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+  }
+  .behindScene {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    gap: 2rem;
+  }
+  .contact {
+    margin-left: 0;
+  }
+  .Info {
+    padding: 1rem 1.5rem;
+  }
+  .iconWrapper {
+    padding-right: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 40vh;
+    height: auto;
+    padding: 4rem 1.5rem;
+  }
+  .heroSection h1 {
+    font-size: 2.2rem;
+  }
+  .heroSection p {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+  .contactPerson {
+    padding: 2.5rem 1.5rem;
+  }
+  .contactPerson h2 {
+    font-size: 2rem;
+  }
+  .peopleOverview {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  .people {
+    padding: 2rem 1.5rem;
+  }
+  .people img {
+    width: 160px;
+    max-width: 100%;
+  }
+  .behindScene {
+    grid-template-columns: 1fr;
+    margin: 0 1.5rem 3rem 1.5rem;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+  .behindScene h2 {
+    font-size: 2rem;
+  }
+  .contact {
+    margin-left: 0;
+    gap: 1rem;
+  }
+  .Info {
+    padding: 1rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  .iconWrapper {
+    padding-right: 0.75rem;
+  }
+  .contactText h3,
+  .contactText p {
+    margin: 0;
+  }
+}/*# sourceMappingURL=contact.css.map */

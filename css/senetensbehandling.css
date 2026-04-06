@@ -12,6 +12,9 @@
   align-items: center;
   text-align: center;
 }
+.heroSection h1 {
+  margin-bottom: 1rem;
+}
 .heroSection::before {
   content: "";
   position: absolute;

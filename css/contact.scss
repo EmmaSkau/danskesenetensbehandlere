@@ -1,0 +1,236 @@
+// ----- VARIABLES -----
+$primary-color: #012a4a;
+$secondary-color: #ffd500;
+$background-color: #e8f1f2;
+$whiteColor: #fcfcfc;
+$padding: 3em 2em;
+$border-radius: 15px;
+$gap: 2em;
+
+// ----- HERO  SECTION -----
+.heroSection {
+  position: relative;
+  height: 40vh;
+  padding-top: 10rem;
+
+  background-image: url("../img/frontpageImg.webp");
+  background-size: cover;
+  background-position: center;
+
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #012a4a83;
+  }
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1,
+  p {
+    color: $whiteColor;
+  }
+}
+
+// ----- CONTACT PEOPLE -----
+.contactPerson {
+  padding: $padding;
+  text-align: center;
+}
+
+.peopleOverview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 2em;
+  padding-top: 2em;
+}
+
+.people {
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  padding: $padding;
+
+  h3,
+  p,
+  a {
+    color: $whiteColor;
+    display: block;
+    margin: 1rem 0;
+  }
+
+  img {
+    width: 200px;
+  }
+}
+
+// ----- INFO -----
+.behindScene {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 0 auto 5em auto;
+  background-color: #012b4ba9;
+  padding: $padding;
+  border-radius: $border-radius;
+
+  h2{
+    color: $whiteColor;
+    margin-bottom: 1rem;
+  }
+
+  h3,
+  p {
+    color: $whiteColor;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4em;
+  gap: 2em;
+}
+
+.Info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1em 2em;
+  border: solid $whiteColor;
+  border-radius: $border-radius;
+}
+
+.contactText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.iconWrapper {
+  padding-right: 2em;
+}
+
+
+// ----- TABLET -----
+@media (max-width: 1024px) {
+  .heroSection {
+    height: 35vh;
+    padding: 5rem 2rem;
+  }
+
+  .heroSection p {
+    max-width: 700px;
+  }
+
+  .peopleOverview {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+  }
+
+  .behindScene {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    gap: 2rem;
+  }
+
+  .contact {
+    margin-left: 0;
+  }
+
+  .Info {
+    padding: 1rem 1.5rem;
+  }
+
+  .iconWrapper {
+    padding-right: 1.25rem;
+  }
+}
+
+
+// ----- MOBILE -----
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 40vh;
+    height: auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .heroSection h1 {
+    font-size: 2.2rem;
+  }
+
+  .heroSection p {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .contactPerson {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .contactPerson h2 {
+    font-size: 2rem;
+  }
+
+  .peopleOverview {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .people {
+    padding: 2rem 1.5rem;
+  }
+
+  .people img {
+    width: 160px;
+    max-width: 100%;
+  }
+
+  .behindScene {
+    grid-template-columns: 1fr;
+    margin: 0 1.5rem 3rem 1.5rem;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .behindScene h2 {
+    font-size: 2rem;
+  }
+
+  .contact {
+    margin-left: 0;
+    gap: 1rem;
+  }
+
+  .Info {
+    padding: 1rem;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .iconWrapper {
+    padding-right: 0.75rem;                                 
+  }
+
+  .contactText h3,
+  .contactText p {
+    margin: 0;
+  }
+}

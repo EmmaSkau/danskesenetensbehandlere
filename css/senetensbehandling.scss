@@ -25,6 +25,10 @@ $gap: 2em;
   align-items: center;
   text-align: center;
 
+  h1 {
+    margin-bottom: 1rem;
+  }
+
   &::before {
     content: "";
     position: absolute;
